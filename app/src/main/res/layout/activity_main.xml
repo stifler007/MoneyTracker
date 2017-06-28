@@ -15,7 +15,7 @@
 
         <EditText
             android:id="@+id/nameItemEditText"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/size_0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:background="@android:color/transparent"
@@ -32,7 +32,7 @@
 
         <EditText
             android:id="@+id/priceItemEditText"
-            android:layout_width="25dp"
+            android:layout_width="@dimen/size_25dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"

@@ -7,4 +7,6 @@
     <dimen name="size_68dp">68dp</dimen>
     <dimen name="size_40dp">40dp</dimen>
     <dimen name="size_50dp">50dp</dimen>
+    <dimen name="size_25dp">25dp</dimen>
+    <dimen name="size_0dp">0dp</dimen>
 </resources>
