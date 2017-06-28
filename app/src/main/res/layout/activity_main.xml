@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern"
     tools:context="com.loftschool.moneytracker.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/colorText"
-        android:background="@color/colorBackgroundText"
-        android:textSize="@dimen/ts_20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_68dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/nameItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_name_item"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/size_20dp"
+            android:paddingStart="@dimen/size_20dp"
+            android:textSize="@dimen/size_20sp">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/priceItem"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_price_item"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/size_5dp"
+            android:paddingStart="@dimen/size_5dp"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/size_20sp" />
+
+        <TextView
+            android:id="@+id/changeCurrency"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/size_5dp"
+            android:paddingStart="@dimen/size_5dp"
+            android:text="@string/currency_ruble"
+            android:textSize="@dimen/size_20sp" />
+
+        <TextView
+            android:id="@+id/addItem"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/add_item"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_40sp" />
+    </LinearLayout>
+</FrameLayout>
