@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/nameItem"
+            android:id="@+id/nameItemEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
@@ -31,7 +31,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/priceItem"
+            android:id="@+id/priceItemEditText"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -45,7 +45,7 @@
             android:textSize="@dimen/size_20sp" />
 
         <TextView
-            android:id="@+id/changeCurrency"
+            android:id="@+id/changeCurrencyTextView"
             android:layout_width="@dimen/size_40dp"
             android:layout_height="wrap_content"
             android:paddingEnd="@dimen/size_5dp"
@@ -54,7 +54,7 @@
             android:textSize="@dimen/size_20sp" />
 
         <TextView
-            android:id="@+id/addItem"
+            android:id="@+id/addItemTextView"
             android:layout_width="@dimen/size_50dp"
             android:layout_height="wrap_content"
             android:enabled="false"

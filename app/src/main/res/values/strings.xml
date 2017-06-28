@@ -4,4 +4,5 @@
     <string name="hint_name_item">Название</string>
     <string name="hint_price_item">0</string>
     <string name="add_item">+</string>
+    <string name="toast_item_added">Покупка добавлена</string>
 </resources>
