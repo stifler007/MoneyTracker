@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             items.add(new Item("apple", 4000));
             items.add(new Item("aircraft", 100));
             items.add(new Item("table", 10));
-            items.add(new Item("microsoft", 4000));
+            items.add(new Item("microsoft", 99589555));
             items.add(new Item("one two three four five six seven eight nine ten", 100));
             items.add(new Item("animal", 10));
             items.add(new Item("bottle", 4000));

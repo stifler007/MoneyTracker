@@ -9,7 +9,9 @@
         android:id="@+id/items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/size_5dp"
+        android:paddingTop="@dimen/size_15dp"
+        android:paddingStart="@dimen/size_5dp"
+        android:paddingEnd="@dimen/size_5dp"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
 </FrameLayout>
