@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackgroundText">#84c0c5</color>
     <color name="colorText">#ffffff</color>
+    <color name="colorBackgroundNameItem">#ffc436</color>
+    <color name="colorBackgroundPriceItem">#e7ae34</color>
 </resources>
