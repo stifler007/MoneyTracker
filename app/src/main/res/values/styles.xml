@@ -9,6 +9,6 @@
 
     <style name="TextWhite">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">@dimen/size_20sp</item>
+        <item name="android:textSize">@dimen/add_item_text_size</item>
     </style>
 </resources>

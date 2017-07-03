@@ -23,9 +23,9 @@
             android:imeOptions="actionNext"
             android:inputType="text"
             android:maxLines="1"
-            android:paddingEnd="@dimen/size_20dp"
-            android:paddingStart="@dimen/size_20dp"
-            android:textSize="@dimen/size_20sp">
+            android:paddingEnd="@dimen/add_item_padding_end"
+            android:paddingStart="@dimen/add_item_padding_start"
+            android:textSize="@dimen/add_item_text_size">
 
             <requestFocus />
         </EditText>
@@ -39,19 +39,19 @@
             android:hint="@string/hint_price_item"
             android:inputType="numberDecimal"
             android:maxLines="1"
-            android:paddingEnd="@dimen/size_5dp"
-            android:paddingStart="@dimen/size_5dp"
+            android:paddingEnd="@dimen/add_item_padding_end"
+            android:paddingStart="@dimen/add_item_padding_start"
             android:textAlignment="textEnd"
-            android:textSize="@dimen/size_20sp" />
+            android:textSize="@dimen/add_item_text_size" />
 
         <TextView
             android:id="@+id/changeCurrencyTextView"
             android:layout_width="@dimen/size_40dp"
             android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/size_5dp"
-            android:paddingStart="@dimen/size_5dp"
+            android:paddingEnd="@dimen/add_item_padding_end"
+            android:paddingStart="@dimen/add_item_padding_start"
             android:text="@string/currency_ruble"
-            android:textSize="@dimen/size_20sp" />
+            android:textSize="@dimen/add_item_text_size" />
 
         <TextView
             android:id="@+id/addItemTextView"
@@ -60,6 +60,6 @@
             android:enabled="false"
             android:text="@string/add_item"
             android:textAlignment="center"
-            android:textSize="@dimen/size_40sp" />
+            android:textSize="@dimen/add_item_text_size_40sp" />
     </LinearLayout>
 </FrameLayout>
