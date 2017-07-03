@@ -2,48 +2,91 @@ package com.loftschool.moneytracker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
+import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    EditText nameItem;
-    EditText priceItem;
-    TextView addItem;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        nameItem = (EditText) findViewById(R.id.nameItemEditText);
-        priceItem = (EditText) findViewById(R.id.priceItemEditText);
-        addItem = (TextView) findViewById(R.id.addItemTextView);
-        nameItem.addTextChangedListener(watcher);
-        priceItem.addTextChangedListener(watcher);
-        addItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, R.string.toast_item_added, Toast.LENGTH_SHORT).show();
-            }
-        });
+        setContentView(R.layout.items);
+        final RecyclerView items = (RecyclerView) findViewById(R.id.items);
+        items.setAdapter(new ItemsAdapter());
     }
 
-    TextWatcher watcher = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+    private class ItemsAdapter extends RecyclerView.Adapter<ItemViewHolder> {
+        private List<Item> items = new ArrayList<>();
+
+        ItemsAdapter() {
+            items.add(new Item("car", 100));
+            items.add(new Item("soap", 10));
+            items.add(new Item("apple", 4000));
+            items.add(new Item("aircraft", 100));
+            items.add(new Item("table", 10));
+            items.add(new Item("microsoft", 99589555));
+            items.add(new Item("one two three four five six seven eight nine ten", 100));
+            items.add(new Item("animal", 10));
+            items.add(new Item("bottle", 4000));
+            items.add(new Item("car", 100));
+            items.add(new Item("soap", 10));
+            items.add(new Item("apple", 4000));
+            items.add(new Item("aircraft", 100));
+            items.add(new Item("table", 10));
+            items.add(new Item("microsoft", 4000));
+            items.add(new Item("one two three four five six seven eight nine ten", 100));
+            items.add(new Item("animal", 10));
+            items.add(new Item("bottle", 4000));
+            items.add(new Item("car", 100));
+            items.add(new Item("soap", 10));
+            items.add(new Item("apple", 4000));
+            items.add(new Item("aircraft", 100));
+            items.add(new Item("table", 10));
+            items.add(new Item("microsoft", 4000));
+            items.add(new Item("one two three four five six seven eight nine ten", 100));
+            items.add(new Item("animal", 10));
+            items.add(new Item("bottle", 4000));
+            items.add(new Item("car", 100));
+            items.add(new Item("soap", 10));
+            items.add(new Item("apple", 4000));
+            items.add(new Item("aircraft", 100));
+            items.add(new Item("table", 10));
+            items.add(new Item("microsoft", 4000));
+            items.add(new Item("one two three four five six seven eight nine ten", 100));
+            items.add(new Item("animal", 10));
+            items.add(new Item("bottle", 4000));
         }
 
         @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            addItem.setEnabled(!TextUtils.isEmpty(nameItem.getText().toString().trim()) && (!TextUtils.isEmpty(priceItem.getText().toString().trim())));
+        public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new ItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item, null));
         }
 
         @Override
-        public void afterTextChanged(Editable editable) {
+        public void onBindViewHolder(ItemViewHolder holder, int position) {
+            final Item item = items.get(position);
+            holder.name.setText(item.name);
+            holder.price.setText(String.valueOf(item.price)+" "+getString(R.string.currency_ruble));
         }
-    };
+
+        @Override
+        public int getItemCount() {
+            return items.size();
+        }
+    }
+
+    private class ItemViewHolder extends RecyclerView.ViewHolder {
+        private final TextView name, price;
+
+        ItemViewHolder(View itemView) {
+            super(itemView);
+            name = (TextView) itemView.findViewById(R.id.name);
+            price = (TextView) itemView.findViewById(R.id.price);
+        }
+    }
 }
